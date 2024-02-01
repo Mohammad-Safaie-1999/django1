@@ -9,7 +9,7 @@ def index_home_blog (request):
     return render (request,'blog/blog-home.html',context)
 
 def index_single (request,pid):
-    post=get_object_or_404(Post,id=pid)
+    post=get_object_or_404(Post,id=pid,status=1)
     context={'post':post}
     return render (request,'blog/blog-single.html',context)
 
