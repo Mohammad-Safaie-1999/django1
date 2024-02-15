@@ -22,4 +22,5 @@ class Post(models.Model):
     published_date=models.DateTimeField(null=True)
     updated_date=models.DateTimeField(auto_now=True)
 
-    
+    def __str__ (self):
+        return f'{self.id}-{self.title}'
